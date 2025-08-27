@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: none;      /* Add this */
+    opacity: 0;         /* Add this */
+    transition: opacity 1.5s ease; /* Add this */
+}
+
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #444;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    color: #222;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    color: #444;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #005bb5;
+}
+
+.btn.hire {
+    background: #28a745;
+}
+
+.btn.hire:hover {
+    background: #1e7e34;
+}.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.social-links a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.social-links a:hover {
+    color: #0073e6;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 1000;
+}
+
+#popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#close-popup {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#close-popup:hover {
+    background-color: #005bb5;
+}
+/* Add this to style.css */
+.blur {
+    filter: blur(6px);
+    pointer-events: none;
+    user-select: none;
+    transition: filter 0.5s;
+}
+
+/* Optional: Overlay for dimming effect */
+#overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.2);
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+#overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+main h2 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+main p, main ul {
+    margin-bottom: 24px;
+}
+
+ul {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+header {
+    margin-bottom: 32px;
+}.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
