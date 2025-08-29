@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Page</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <div class="container">
@@ -19,33 +20,28 @@
       </nav>
     </header>
     <main>
-      <h1>Contact Me</h1>
-
-<section>
-  <h2>Get in Touch</h2>
-  <p>If you’d like to reach out to me, here are my contact details:</p>
-  <ul>
-    <li><strong>Email:</strong> durotoyeoladimeji510@gmail.com</li>
-    <li><strong>Phone:</strong> 09066453030</li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oladimeji-mathew-765a3048" target="_blank">Oladimeji Mathew</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/marhew23313" target="_blank">marhew23313</a></li>
-  </ul>
-</section>
+      <section>
+      <h2>Contact Me</h2>
+       <p>If you’d like to get in touch, feel free to reach out through any of the following methods or send me a message using the form below.</p>
+       <a href="tel:+2349066453030">Phone: +234 904 645 3030</a><br>
+        <div class="contact-links">
+         <a href="https://github.com/mathew23313" target="_blank" class="btn-link github"><i class="fab fa-github"></i> GitHub</a>
+         <a href="https://linkedin.com/in/oladimeji-mathew-765a3048" target="_blank" class="btn-link linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+         <a href="mailto:durotoyeoladimeji510@gmail.com" class="btn-link email"><i class="fas fa-envelope"></i> Email</a>
+       </div>
+      </section>
 
 <section>
   <h2>Send a Message</h2>
-  <form action="https://formspree.io/f/xovlggad" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+  <form class="contact-form" action="https://formspree.io/f/xovlggad" method="POST">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+  </div>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn-send">Send</button>
+  </form>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <button type="submit">Send</button>
-</form>
 </section>
     </main>
   </div>
