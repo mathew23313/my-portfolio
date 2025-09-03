@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f9; }
+    .calculator { display: inline-block; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    input { width: 250px; height: 40px; font-size: 18px; margin-bottom: 10px; text-align: right; }
+    button { width: 60px; height: 40px; margin: 5px; font-size: 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Scientific Calculator</h1>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="backspace()">⌫</button>
+    <button onclick="insert('(')">(</button>
+    <button onclick="insert(')')">)</button><br>
+
+    <button onclick="insert('7')">7</button>
+    <button onclick="insert('8')">8</button>
+    <button onclick="insert('9')">9</button>
+    <button onclick="insert('/')">÷</button><br>
+
+    <button onclick="insert('4')">4</button>
+    <button onclick="insert('5')">5</button>
+    <button onclick="insert('6')">6</button>
+    <button onclick="insert('*')">×</button><br>
+
+    <button onclick="insert('1')">1</button>
+    <button onclick="insert('2')">2</button>
+    <button onclick="insert('3')">3</button>
+    <button onclick="insert('-')">−</button><br>
+
+    <button onclick="insert('0')">0</button>
+    <button onclick="insert('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="insert('+')">+</button><br>
+
+    <button onclick="insert('Math.sqrt(')">√</button>
+    <button onclick="insert('Math.pow(')">xʸ</button>
+    <button onclick="insert('Math.sin(')">sin</button>
+    <button onclick="insert('Math.cos(')">cos</button><br>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    
+    function insert(value) {
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      display.value = '';
+    }
+
+    function backspace() {
+      display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    }
+  </script>
+</body>
+</html>
